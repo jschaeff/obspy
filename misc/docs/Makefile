@@ -23,7 +23,7 @@ install-obspy-dev:
 
 # If you want to build docs from docker where you mounted new version of obspy you have to first reinstall it
 html-docker: install-obspy-dev
-	make html
+	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
