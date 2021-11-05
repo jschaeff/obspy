@@ -4,13 +4,13 @@ on:
 
 jobs:
   docs:
-    runs-on: ubuntu-20.04
+    runs-on: heavelock/obspydocs:latest
     steps:
       - uses: actions/checkout@v2
-      - uses: obspy/sphinx-action@master
-        with:
-          pre-build-command: "python -m pip install ."
-          docs-folder: "misc/docs/"
+      - run: |
+          python -m pip install .
+          cd misc/docs
+          make html
       - run: tar cfJ documentation.tar.xz misc/docs/build/html/
       - uses: actions/upload-artifact@v2
         with:
