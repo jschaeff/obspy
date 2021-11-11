@@ -1,10 +1,10 @@
 name: "Docs building"
-on:
-  - pull_request
+on: pull_request
 
 jobs:
   docs:
-    runs-on: heavelock/obspydocs:latest
+    runs-on: ubuntu-latest
+    container: heavelock/obspydocs:latest
     steps:
       - uses: actions/checkout@v2
       - run: |
