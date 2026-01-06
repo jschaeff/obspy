@@ -1720,7 +1720,7 @@ class TestClientNoNetwork():
 
     def test_resif_deprecation_message(self):
         """
-        Test that using "RESIF" short URL in FDSN client shows a warning 
+        Test that using "RESIF" short URL in FDSN client shows a warning
         message.
         """
         msg = ("RESIF is now EPOSFR. Webservices and client will be "
