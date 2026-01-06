@@ -251,8 +251,8 @@ class Client(object):
             warnings.warn(msg, ObsPyDeprecationWarning)
             
         if base_url.upper() == 'RESIF':
-            msg = ("RESIF client is deprecated and will be removed in obspy 1.6 "
-                   "in favor of EPOSFR. Please consider changing the FDSN "
+            msg = ("RESIF is now EPOSFR. Webservices and client will be "
+                   "shutdown in 2026. Please consider changing the FDSN "
                    "client short URL to 'EPOSFR'.")
             warnings.warn(msg, ObsPyDeprecationWarning)
 
