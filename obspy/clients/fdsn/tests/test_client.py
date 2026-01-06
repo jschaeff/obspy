@@ -1722,9 +1722,9 @@ class TestClientNoNetwork():
         """
         Test that using "RESIF" short URL in FDSN client shows a warning message.
         """
-        msg = ("RESIF client is deprecated and will be removed in obspy 1.6 "
-                   "in fafor of EPOSFR. Please consider changing the FDSN "
-                   "client short URL to 'EPOSFR'.")
+        msg = ("RESIF is now EPOSFR. Webservices and client will be "
+               "shutdown in 2026. Please consider changing the FDSN "
+               "client short URL to 'EPOSFR'.")
         with CatchAndAssertWarnings(expected=[(ObsPyDeprecationWarning, msg)]):
             client = Client('RESIF', _discover_services=False)
 
