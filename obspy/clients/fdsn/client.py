@@ -249,6 +249,14 @@ class Client(object):
             msg = ("IRIS is now EarthScope, please consider changing the FDSN "
                    "client short URL to 'EARTHSCOPE'.")
             warnings.warn(msg, ObsPyDeprecationWarning)
+            
+        if base_url.upper() == 'RESIF':
+            # TODO: 2026-01-06 wait some weeks for EPOSFR to open the services 
+            # base_url = 'EPOSFR'
+            msg = ("RESIF client is deprecated and will be removed in obspy 1.6 "
+                   "in fafor of EPOSFR. Please consider changing the FDSN "
+                   "client short URL to 'EPOSFR'.")
+            warnings.warn(msg, ObsPyDeprecationWarning)
 
         if base_url.upper() in URL_MAPPINGS:
             url_mapping = base_url.upper()
