@@ -249,7 +249,7 @@ class Client(object):
             msg = ("IRIS is now EarthScope, please consider changing the FDSN "
                    "client short URL to 'EARTHSCOPE'.")
             warnings.warn(msg, ObsPyDeprecationWarning)
-            
+
         if base_url.upper() == 'RESIF':
             msg = ("RESIF is now EPOSFR. Webservices and client will be "
                    "shutdown in 2026. Please consider changing the FDSN "
