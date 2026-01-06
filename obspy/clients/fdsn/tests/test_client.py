@@ -1718,6 +1718,16 @@ class TestClientNoNetwork():
             client = Client('IRIS', _discover_services=False)
         assert client.base_url == 'https://service.iris.edu'
 
+    def test_resif_deprecation_message(self):
+        """
+        Test that using "RESIF" short URL in FDSN client shows a warning message.
+        """
+        msg = ("RESIF client is deprecated and will be removed in obspy 1.6 "
+                   "in fafor of EPOSFR. Please consider changing the FDSN "
+                   "client short URL to 'EPOSFR'.")
+        with CatchAndAssertWarnings(expected=[(ObsPyDeprecationWarning, msg)]):
+            client = Client('RESIF', _discover_services=False)
+
     def test_query_a_non_existent_service_exception(self):
         """
         Tests that a FDSNNoServiceException is raised when no services are
