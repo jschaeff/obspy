@@ -1720,13 +1720,14 @@ class TestClientNoNetwork():
 
     def test_resif_deprecation_message(self):
         """
-        Test that using "RESIF" short URL in FDSN client shows a warning message.
+        Test that using "RESIF" short URL in FDSN client shows a warning 
+        message.
         """
         msg = ("RESIF is now EPOSFR. Webservices and client will be "
                "shutdown in 2026. Please consider changing the FDSN "
                "client short URL to 'EPOSFR'.")
         with CatchAndAssertWarnings(expected=[(ObsPyDeprecationWarning, msg)]):
-            client = Client('RESIF', _discover_services=False)
+            Client('RESIF', _discover_services=False)
 
     def test_query_a_non_existent_service_exception(self):
         """
