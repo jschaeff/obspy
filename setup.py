@@ -92,7 +92,7 @@ INSTALL_REQUIRES = [
     'scipy>=1.7',
     'matplotlib>=3.3',
     'lxml',
-    'setuptools',
+    'setuptools<0.82',
     'sqlalchemy>=1.4',
     'decorator',
     'requests',
